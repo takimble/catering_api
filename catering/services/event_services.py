@@ -12,7 +12,7 @@ def new_event_post(data,user):
     )
 
     try:
-        new_event_post.save()
+        new_event_post.save_event()
         message = {
             'message': 'event saved'
         }

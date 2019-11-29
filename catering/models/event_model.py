@@ -24,13 +24,7 @@ class Events(db.Model):
     def delete(self):
         db.session.delete(self)
         db.session.commit()
-    
-    def update(self, old, data):
-        for key, item in data.items():
-            setattr(old, key, item)
-        self.modified_at = datetime.utcnow()
-        db.session.commit()
-        return old
+
     
     @staticmethod
     def get_all_events():
